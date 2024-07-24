@@ -9,13 +9,14 @@
             margin: 0;
             padding: 0;
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(45deg, #1a1a2e, #16213e, #0f3460, #53354a);
+            background: linear-gradient(45deg, #3b2e5a, #4e3a66, #673b7b, #8e44ad);
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             color: #fff;
             overflow: hidden;
+            perspective: 1000px;
         }
         .container {
             text-align: center;
@@ -72,6 +73,40 @@
             from { transform: rotate(0deg); }
             to { transform: rotate(360deg); }
         }
+        .bird {
+            position: absolute;
+            background-image: url('https://path-to-your-bird-image.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 50px;
+            height: 50px;
+            animation: fly 10s infinite linear;
+        }
+        .bird:nth-child(1) { top: 10%; left: -10%; animation-delay: 0s; }
+        .bird:nth-child(2) { top: 30%; left: -20%; animation-delay: 2s; }
+        .bird:nth-child(3) { top: 50%; left: -15%; animation-delay: 4s; }
+        .bird:nth-child(4) { top: 70%; left: -25%; animation-delay: 6s; }
+        .bird:nth-child(5) { top: 90%; left: -30%; animation-delay: 8s; }
+
+        @keyframes fly {
+            0% { transform: translateX(0) translateY(0); }
+            50% { transform: translateX(150vw) translateY(-30px); }
+            100% { transform: translateX(0) translateY(0); }
+        }
+
+        .book {
+            position: absolute;
+            width: 60px;
+            height: 80px;
+            background-image: url('https://path-to-your-book-image.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        .book:nth-child(1) { top: 80%; left: 10%; transform: rotate(-15deg); }
+        .book:nth-child(2) { top: 85%; left: 30%; transform: rotate(10deg); }
+        .book:nth-child(3) { top: 78%; left: 50%; transform: rotate(-10deg); }
+        .book:nth-child(4) { top: 82%; left: 70%; transform: rotate(5deg); }
+        .book:nth-child(5) { top: 88%; left: 90%; transform: rotate(-5deg); }
     </style>
 </head>
 <body>
@@ -82,5 +117,15 @@
         <div class="hint">A transformative journey in learning and growth is on the horizon. Stay tuned for something extraordinary.</div>
         <div class="coming-soon">Coming Soon</div>
     </div>
+    <div class="bird"></div>
+    <div class="bird"></div>
+    <div class="bird"></div>
+    <div class="bird"></div>
+    <div class="bird"></div>
+    <div class="book"></div>
+    <div class="book"></div>
+    <div class="book"></div>
+    <div class="book"></div>
+    <div class="book"></div>
 </body>
 </html>
