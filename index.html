@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soulful Study - Coming Soon</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(45deg, #1a1a2e, #16213e, #0f3460, #53354a);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            overflow: hidden;
+        }
+        .container {
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .logo {
+            font-size: 3rem;
+            font-weight: bold;
+            letter-spacing: 5px;
+        }
+        .tagline {
+            font-size: 1.5rem;
+            margin: 20px 0;
+        }
+        .hint {
+            font-size: 1rem;
+            margin: 40px 0;
+            opacity: 0.8;
+        }
+        .coming-soon {
+            font-size: 2rem;
+            font-weight: bold;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .background-animation {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            overflow: hidden;
+        }
+        .background-animation::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1), rgba(255,255,255,0) 70%);
+            animation: rotate 30s infinite linear;
+        }
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-animation"></div>
+    <div class="container">
+        <div class="logo">Soulful Study</div>
+        <div class="tagline">Unleash Your Inner Scholar</div>
+        <div class="hint">A transformative journey in learning and growth is on the horizon. Stay tuned for something extraordinary.</div>
+        <div class="coming-soon">Coming Soon</div>
+    </div>
+</body>
+</html>
