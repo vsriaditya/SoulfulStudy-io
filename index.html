@@ -19,10 +19,13 @@
             color: #fff;
             overflow: hidden;
             perspective: 1000px;
+            position: relative;
         }
         .container {
             text-align: center;
             animation: fadeIn 2s ease-in-out;
+            position: relative;
+            z-index: 1;
         }
         .logo {
             font-size: 3rem;
@@ -59,8 +62,10 @@
             left: 0;
             right: 0;
             bottom: 0;
-            z-index: -1;
-            overflow: hidden;
+            z-index: 0;
+            background: url('background.webp') no-repeat center center fixed;
+            background-size: cover;
+            opacity: 0.5;
         }
         .background-animation::before {
             content: '';
